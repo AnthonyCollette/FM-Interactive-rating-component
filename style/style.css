@@ -1,3 +1,7 @@
+html {
+	font-size: 16px;
+}
+
 body {
 	--color-001: hsl(25, 97%, 53%);
 	--color-002: hsl(0, 0%, 100%);
@@ -13,6 +17,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	position: relative;
 }
 
 h2,
@@ -30,16 +35,19 @@ p {
 	margin-top: 20px;
 	position: absolute;
 	bottom: 10px;
+	color: var(--color-003);
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
 
 .card {
-	width: 350px;
+	width: 70vw;
+	max-width: 350px;
 	background-color: var(--color-005);
-	padding: 40px;
+	padding: 30px 20px;
 	border-radius: 25px;
+	margin-top: 20vh;
 }
 
 .card > svg {
@@ -55,6 +63,7 @@ select {
 	width: 100%;
 	background-color: transparent;
 	height: 50px;
+	text-align: center;
 }
 select:focus {
 	outline: none;
@@ -64,9 +73,9 @@ option {
 	background-color: var(--color-007);
 	border-radius: 50px;
 	border: none;
-	width: 50px;
+	width: 30px;
 	height: 30px;
-	padding: 15px 0 5px;
+	padding: 10px 5px 0;
 	font-size: 0.938rem;
 	color: var(--color-002);
 	cursor: pointer;
@@ -75,7 +84,7 @@ option {
 	text-align: center;
 }
 option:not(:first-of-type) {
-	margin-left: 24px;
+	margin-left: 5%;
 }
 option:hover {
 	background-color: var(--color-001);
@@ -119,6 +128,7 @@ input[type='submit']:hover {
 	display: flex;
 	transform: translateY(-20px);
 	transition: all 0.4s ease-in-out;
+	margin-top: 0;
 }
 
 .thank-card h2 {
@@ -142,4 +152,20 @@ input[type='submit']:hover {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 976px) {
+	.card {
+		padding: 40px;
+	}
+	option {
+		width: 50px;
+		height: 30px;
+		padding: 15px 0 5px;
+	}
+	option:not(:first-of-type) {
+		margin-left: 24px;
+	}
 }
